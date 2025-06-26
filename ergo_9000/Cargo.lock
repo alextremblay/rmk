@@ -983,6 +983,26 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
 
 [[package]]
+name = "ergo9000"
+version = "0.2.0"
+dependencies = [
+ "const-gen",
+ "cortex-m-rt",
+ "defmt 1.0.1",
+ "defmt-rtt",
+ "embassy-executor",
+ "embassy-futures",
+ "embassy-rp",
+ "embassy-time",
+ "json",
+ "panic-probe",
+ "portable-atomic",
+ "rmk",
+ "static_cell",
+ "xz2",
+]
+
+[[package]]
 name = "ff"
 version = "0.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1867,7 +1887,7 @@ dependencies = [
 
 [[package]]
 name = "rmk"
-version = "0.7.2"
+version = "0.7.3"
 dependencies = [
  "bitfield-struct",
  "bt-hci",
@@ -1914,7 +1934,7 @@ dependencies = [
 
 [[package]]
 name = "rmk-config"
-version = "0.5.1"
+version = "0.5.2"
 dependencies = [
  "cargo_toml",
  "config",
@@ -1930,7 +1950,7 @@ dependencies = [
 
 [[package]]
 name = "rmk-macro"
-version = "0.6.2"
+version = "0.6.3"
 dependencies = [
  "cargo_toml",
  "darling",
@@ -1945,26 +1965,6 @@ dependencies = [
  "serde_derive",
  "syn 2.0.103",
  "toml",
-]
-
-[[package]]
-name = "rmk-rp2040"
-version = "0.2.0"
-dependencies = [
- "const-gen",
- "cortex-m-rt",
- "defmt 1.0.1",
- "defmt-rtt",
- "embassy-executor",
- "embassy-futures",
- "embassy-rp",
- "embassy-time",
- "json",
- "panic-probe",
- "portable-atomic",
- "rmk",
- "static_cell",
- "xz2",
 ]
 
 [[package]]
