@@ -2,9 +2,6 @@ name: Build firmware according to user config file
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "**"
 
 jobs:
   build:
@@ -17,19 +14,19 @@ jobs:
       - name: Install flip-link and cargo-make
         run: cargo binstall cargo-make flip-link -y
       - name: Build firmware
-        working-directory: ./rmk
+        working-directory: ./ergo_9000
         run: cargo build --release
       - name: Build uf2 firmware
-        working-directory: ./rmk
+        working-directory: ./ergo_9000
         run: cargo make uf2 --release
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: firmware_uf2
-          path: ergo9000/*.uf2
+          path: ergo_9000/*.uf2
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: firmware_hex
-          path: ergo9000/*.hex
-
+          path: ergo_9000/*.hex
+  
