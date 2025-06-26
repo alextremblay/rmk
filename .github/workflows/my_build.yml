@@ -2,7 +2,17 @@ name: Build firmware according to user config file
 
 on:
   workflow_call:
-    
+    inputs:
+      keyboard_toml_path:
+        description: "Path to the keyboard.toml"
+        default: "keyboard.toml"
+        required: false
+        type: string
+      vial_json_path:
+        description: "Path to the vial.json"
+        default: "vial.json"
+        required: false
+        type: string
 
 jobs:
   build:
